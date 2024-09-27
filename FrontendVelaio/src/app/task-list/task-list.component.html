@@ -1,0 +1,17 @@
+<div class="task-list">
+  <h2>Lista de Tareas</h2>
+  <div *ngFor="let task of tasks" class="task-item">
+    <h3>{{ task.nombre }}</h3>
+    <p>Fecha Límite: {{ task.fecha_limite }}</p>
+    <h4>Usuarios Asignados:</h4>
+    <ul>
+      <li *ngFor="let user of task.usuarios">
+        {{ user.nombre }} (Edad: {{ user.edad }})
+        <ul>
+          <li *ngFor="let skill of user.habilidades">{{ skill.nombre }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+Hola

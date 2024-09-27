@@ -1,0 +1,198 @@
+[
+  {
+    "Task": {
+      "id": 1,
+      "Nombre": "Tarea A",
+      "fecha_limite": "2024-10-01",
+      "Usuarios": [
+        {
+          "id": 1,
+          "Nombre": "Juan Pérez",
+          "edad": 25,
+          "Habilidades": [
+            {
+              "id": 1,
+              "Nombre": "JavaScript"
+            },
+            {
+              "id": 2,
+              "Nombre": "TypeScript"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "Nombre": "María López",
+          "edad": 30,
+          "Habilidades": [
+            {
+              "id": 2,
+              "Nombre": "TypeScript"
+            },
+            {
+              "id": 3,
+              "Nombre": "CSS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Task": {
+      "id": 2,
+      "Nombre": "Tarea B",
+      "fecha_limite": "2024-10-05",
+      "Usuarios": [
+        {
+          "id": 3,
+          "Nombre": "Carlos García",
+          "edad": 28,
+          "Habilidades": [
+            {
+              "id": 4,
+              "Nombre": "JavaScript"
+            },
+            {
+              "id": 3,
+              "Nombre": "CSS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Task": {
+      "id": 3,
+      "Nombre": "Tarea C",
+      "fecha_limite": "2024-10-07",
+      "Usuarios": [
+        {
+          "id": 4,
+          "Nombre": "Ana Torres",
+          "edad": 26,
+          "Habilidades": [
+            {
+              "id": 1,
+              "Nombre": "JavaScript"
+            },
+            {
+              "id": 3,
+              "Nombre": "CSS"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "Nombre": "Luis Fernández",
+          "edad": 35,
+          "Habilidades": [
+            {
+              "id": 1,
+              "Nombre": "JavaScript"
+            },
+            {
+              "id": 2,
+              "Nombre": "TypeScript"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Task": {
+      "id": 4,
+      "Nombre": "Tarea D",
+      "fecha_limite": "2024-10-10",
+      "Usuarios": [
+        {
+          "id": 6,
+          "Nombre": "Sofía Martínez",
+          "edad": 24,
+          "Habilidades": [
+            {
+              "id": 2,
+              "Nombre": "TypeScript"
+            },
+            {
+              "id": 4,
+              "Nombre": "JavaScript"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Task": {
+      "id": 5,
+      "Nombre": "Tarea E",
+      "fecha_limite": "2024-10-12",
+      "Usuarios": [
+        {
+          "id": 7,
+          "Nombre": "Miguel Sánchez",
+          "edad": 29,
+          "Habilidades": [
+            {
+              "id": 1,
+              "Nombre": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "Nombre": "Laura Moreno",
+          "edad": 32,
+          "Habilidades": [
+            {
+              "id": 3,
+              "Nombre": "CSS"
+            },
+            {
+              "id": 4,
+              "Nombre": "JavaScript"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Task": {
+      "id": 6,
+      "Nombre": "Tarea F",
+      "fecha_limite": "2024-10-15",
+      "Usuarios": [
+        {
+          "id": 9,
+          "Nombre": "David Gómez",
+          "edad": 27,
+          "Habilidades": [
+            {
+              "id": 1,
+              "Nombre": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "Nombre": "Valentina Ruiz",
+          "edad": 31,
+          "Habilidades": [
+            {
+              "id": 2,
+              "Nombre": "TypeScript"
+            },
+            {
+              "id": 3,
+              "Nombre": "CSS"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

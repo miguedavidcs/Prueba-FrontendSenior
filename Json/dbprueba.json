@@ -1,0 +1,171 @@
+[
+    {
+      "Task": {
+        "Nombre": "Tarea A",
+        "fecha_limite": "2024-10-01",
+        "Usuarios": [
+          {
+            "Nombre": "Juan Pérez",
+            "edad": 25,
+            "Habilidades": [
+              {
+                "Nombre": "JavaScript"
+              },
+              {
+                "Nombre": "Angular"
+              }
+            ]
+          },
+          {
+            "Nombre": "María López",
+            "edad": 30,
+            "Habilidades": [
+              {
+                "Nombre": "TypeScript"
+              },
+              {
+                "Nombre": "CSS"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Task": {
+        "Nombre": "Tarea B",
+        "fecha_limite": "2024-10-05",
+        "Usuarios": [
+          {
+            "Nombre": "Carlos García",
+            "edad": 28,
+            "Habilidades": [
+              {
+                "Nombre": "Python"
+              },
+              {
+                "Nombre": "Django"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Task": {
+        "Nombre": "Tarea C",
+        "fecha_limite": "2024-10-07",
+        "Usuarios": [
+          {
+            "Nombre": "Ana Torres",
+            "edad": 26,
+            "Habilidades": [
+              {
+                "Nombre": "React"
+              },
+              {
+                "Nombre": "Node.js"
+              }
+            ]
+          },
+          {
+            "Nombre": "Luis Fernández",
+            "edad": 35,
+            "Habilidades": [
+              {
+                "Nombre": "Java"
+              },
+              {
+                "Nombre": "Spring Boot"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Task": {
+        "Nombre": "Tarea D",
+        "fecha_limite": "2024-10-10",
+        "Usuarios": [
+          {
+            "Nombre": "Sofía Martínez",
+            "edad": 24,
+            "Habilidades": [
+              {
+                "Nombre": "PHP"
+              },
+              {
+                "Nombre": "Laravel"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Task": {
+        "Nombre": "Tarea E",
+        "fecha_limite": "2024-10-12",
+        "Usuarios": [
+          {
+            "Nombre": "Miguel Sánchez",
+            "edad": 29,
+            "Habilidades": [
+              {
+                "Nombre": "Go"
+              },
+              {
+                "Nombre": "Kubernetes"
+              }
+            ]
+          },
+          {
+            "Nombre": "Laura Moreno",
+            "edad": 32,
+            "Habilidades": [
+              {
+                "Nombre": "Ruby"
+              },
+              {
+                "Nombre": "Rails"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Task": {
+        "Nombre": "Tarea F",
+        "fecha_limite": "2024-10-15",
+        "Usuarios": [
+          {
+            "Nombre": "David Gómez",
+            "edad": 27,
+            "Habilidades": [
+              {
+                "Nombre": "C#"
+              },
+              {
+                "Nombre": ".NET"
+              }
+            ]
+          },
+          {
+            "Nombre": "Valentina Ruiz",
+            "edad": 31,
+            "Habilidades": [
+              {
+                "Nombre": "Swift"
+              },
+              {
+                "Nombre": "iOS Development"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+  

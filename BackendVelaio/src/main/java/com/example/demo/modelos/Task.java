@@ -25,7 +25,7 @@ public class Task {
         joinColumns = @JoinColumn(name = "task_id"),
         inverseJoinColumns = @JoinColumn(name = "user_id")
     )
-    private Set<User> users = new HashSet<>();
+    private Set<Userx> users = new HashSet<>();
     
 	public Task() {
 		super();
@@ -63,11 +63,11 @@ public class Task {
 		this.completed = completed;
 	}
 
-	public Set<User> getUsers() {
+	public Set<Userx> getUsers() {
 		return users;
 	}
 
-	public void setUsers(Set<User> users) {
+	public void setUsers(Set<Userx> users) {
 		this.users = users;
 	}
     

@@ -16,7 +16,7 @@ public class Skill {
     private String nombre;
 
     @ManyToMany(mappedBy = "skills")
-    private Set<User> users = new HashSet<>();
+    private Set<Userx> users = new HashSet<>();
     
 	public Skill() {
 		super();
@@ -38,11 +38,11 @@ public class Skill {
 		this.nombre = nombre;
 	}
 
-	public Set<User> getUsers() {
+	public Set<Userx> getUsers() {
 		return users;
 	}
 
-	public void setUsers(Set<User> users) {
+	public void setUsers(Set<Userx> users) {
 		this.users = users;
 	}
     

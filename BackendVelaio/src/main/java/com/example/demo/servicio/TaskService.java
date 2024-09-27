@@ -5,7 +5,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import com.example.demo.modelos.Task;
-import com.example.demo.modelos.User;
+
+import com.example.demo.modelos.Userx;
+import com.example.demo.dto.InDtoIngresarDatos;
+import com.example.demo.dto.OutDtoIngresarDatos;
 import com.example.demo.modelos.Skill;
 import com.example.demo.repositorio.TaskRepository;
 import com.example.demo.repositorio.UserRepository;
@@ -25,102 +28,42 @@ public class TaskService {
     @Autowired
     private SkillRepository skillRepository;
 
-    // Método para crear una tarea
-    public Task createTask(Task task) {
-        return taskRepository.save(task);
-    }
+    public OutDtoIngresarDatos saveData(InDtoIngresarDatos input) {
+    	Task task = input.getNuevotask();
+        Userx user = input.getNuevousuario();
+        Skill skill = input.getNuevoskill();
+     
+        task = saveOrUpdateTask(task);
 
-    // Método para listar tareas con paginación
-    public Page<Task> listTasks(Pageable pageable) {
-        return taskRepository.findAll(pageable);
-    }
-
-    // Método para obtener una tarea por ID
-    public Optional<Task> getTaskById(Long id) {
-        return taskRepository.findById(id);
-    }
-
- // Método para asignar un usuario a una tarea
-    public Task assignUserToTask(Long taskId, Long userId, User newUser) {
-        Task task = taskRepository.findById(taskId)
-            .orElseThrow(() -> new RuntimeException("Task not found"));
-
-        User user;
         
+        user = assignUserToTask(task, user);
+
         
-        Optional<User> existingUser = userRepository.findById(userId);
+        skill = assignSkillToUser(user, skill);
         
-        if (existingUser.isPresent()) {
-            
-            user = existingUser.get();
-        } else {
-           
-            user = newUser;
-            userRepository.save(user); 
-        }
-        
-        
-        task.getUsers().add(user);
-        return taskRepository.save(task);
+        return new OutDtoIngresarDatos(user, task, skill);
     }
 
- // Método para asignar una habilidad a un usuario en una tarea
-    public Task assignSkillToUserInTask(Long taskId, Long userId, Long skillId, User newUser) {
-        Task task = taskRepository.findById(taskId)
-            .orElseThrow(() -> new RuntimeException("Task not found"));
+	private Skill assignSkillToUser(Userx user, Skill skill) {
+		
+		return null;
+	}
 
-        User user;
+	private Userx assignUserToTask(Task task, Userx user) {
+		Optional<Userx> existingUser = userRepository.findById(user.getId());
+		if(existingUser.isPresent()) {
+			user = existingUser.get();
+		}else {
+			user = userRepository.save(user);
+		}
+		if (!task.getUsers().contains(user)) {
+			task.getUsers().add(user);
+		}
+		return null;
+	}
 
-        // Intentar encontrar el usuario existente
-        Optional<User> existingUser = userRepository.findById(userId);
-
-        if (existingUser.isPresent()) {
-            // Si el usuario existe, lo asignamos
-            user = existingUser.get();
-        } else {
-            // Si el usuario no existe, lo creamos
-            user = newUser;
-            userRepository.save(user); // Guardamos el nuevo usuario
-        }
-
-        // Buscamos la habilidad
-        Skill skill = skillRepository.findById(skillId)
-            .orElseThrow(() -> new RuntimeException("Skill not found"));
-
-        // Agregamos la habilidad al usuario si no ya la tiene
-        if (!user.getSkills().contains(skill)) {
-            user.getSkills().add(skill);
-        }
-
-        // Aseguramos que el usuario esté en la tarea
-        if (!task.getUsers().contains(user)) {
-            task.getUsers().add(user);
-        }
-
-        // Guardamos la tarea
-        return taskRepository.save(task);
-    }
-
-
-    // Método para eliminar un usuario de una tarea
-    public Task removeUserFromTask(Long taskId, Long userId) {
-        Task task = taskRepository.findById(taskId).orElseThrow(() -> new RuntimeException("Task not found"));
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-
-        task.getUsers().remove(user);
-        return taskRepository.save(task);
-    }
-
-    // Método para eliminar una habilidad de un usuario en una tarea
-    public Task removeSkillFromUserInTask(Long taskId, Long userId, Long skillId) {
-        Task task = taskRepository.findById(taskId).orElseThrow(() -> new RuntimeException("Task not found"));
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-        Skill skill = skillRepository.findById(skillId).orElseThrow(() -> new RuntimeException("Skill not found"));
-
-        user.getSkills().remove(skill);
-        task.getUsers().remove(user);
-        return taskRepository.save(task);
-    }
-
-    // Otros métodos según sea necesario...
+	private Task saveOrUpdateTask(Task task) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

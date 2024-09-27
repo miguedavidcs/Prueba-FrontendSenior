@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-public class User {
+public class Userx {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,7 +26,7 @@ public class User {
     )
     private Set<Skill> skills = new HashSet<>();
     
-	public User() {
+	public Userx() {
 		super();
 	}
 
